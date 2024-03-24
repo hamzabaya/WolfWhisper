@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>WolfWhisper: Where Conversations Run Wild ...</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+        ::-webkit-scrollbar {
+        width: 8px; 
+    
+        }
+        ::-webkit-scrollbar-thumb {
+        background-color: blueviolet;
+        border-radius: 6px;
+        }
+    
+
+        input[type=text], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 2px solid white;
+            border-radius: 4px;
+            box-sizing: border-box;
+            color: #000;
+            }
+    
+        input[type=submit] {
+            border-radius: 4px;
+            color: white;
+            width: 80%;
+            margin: 0 10%;
+            text-align: center;
+            height: 6vh;
+            background-color: blueviolet;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+    
+        input[type=submit]:hover {
+            color: white;
+            transform: translateY(-2px);
+        }
+        #sect_homepr {
+            color: blueviolet;
+            margin-top: 140px;
+            width: 600px;
+            height: 38%;
+            border: 2px solid whitesmoke;
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.95;
+            backdrop-filter: blur(400px);
+            transition: 0.3s linear;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+}
+        </style>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'home' %}">
+            <img src="{% static 'images/logo.png' %}" class="logo"/>
+        </a>
+        <ul>
+            <button class="sign" id="ch_room"><a class="link" href="{% url 'index' %}">Log out</a></button>
+        </ul>
+    </nav>
+    <section id="sect_homepr">
+        
+        <div class="home">
+            <br>
+            <!-- Join Section -->
+            <div class="chatroom">
+                <div class="square-background">
+                    <h3>Looking for Someone to Join?</h3>
+                </div>
+                <br>
+            </div>
+    
+        
+            <!-- Create Room Section -->
+            <div class="chatroom">
+                <div class="square-background">
+                    <h3>Create/Join a Chatroom</h3>
+                </div>
+                <br>
+            </div>
+            <div class="container">
+                <form id = "post-form" method="POST" action="checkview">
+                    {% csrf_token %}
+                    <input type="text" name="room_name" placeholder="Room" required/>
+                    <input class="join-button" type="submit" value="Join">
+                </form>
+            </div>
+        </div>
+        
+    </section>
+
+</body>
+<footer>
+
+</footer>
+
+</html>

@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>WolfWhisper: Sign up</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'index' %}">
+            <img src="{% static 'images/logo.png' %}" class="logo"/>
+        </a>
+        <ul>
+            <a href="{% url 'index' %}">Home</a>
+            <button class="sign" id="sign_in"><a href="{% url 'sign_in' %}">Sign In</a></button>
+        </ul>
+    </nav>
+    <section id="sect_sign_up">
+        <div class="sign_up">
+            <h3 class="title">Sign up</h3>
+            <form method="post" action="{% url 'sign_up' %}">
+                {% csrf_token %}
+                <div class="user-inputs">
+                    <label for="firstn_signin">First Name</label>
+                    <input type="text" name="first_name" required>
+                </div>
+                <div class="user-inputs">
+                    <label for="lastn_signin">Last Name</label>
+                    <input type="text" name="last_name" required>
+                </div>
+                <div class="user-inputs">
+                    <label for="usern_signin">Username</label>
+                    <input type="text" name="Username" required>
+                </div>
+                <div class="user-inputs">
+                    <label for="date_signin" id="date_signin_label">Date of birth</label>
+                    <input type="date" name="date_of_birth">
+                </div>
+                <div class="user-inputs">
+                    <label for="email_signin">Email</label>
+                    <input type="email" name="identifiant" required>
+                </div>
+                <div class="user-inputs">
+                    <label for="password_signin" id="password_signin_label">Password</label>
+                    <input type="password" name="mot_de_passe" required>
+                </div>
+                <div class="user-inputs">
+                    <label for="conf_pass_signin" id="conf_signin_label">Confirm password</label>
+                    <input type="password" name="conf_pass_signin" required>
+                </div>
+                <div class="forem">
+                    <div class="rem">
+                        <input type="checkbox" name="remember_me">
+                        <p class="remember">Remember me</p>
+                    </div>
+                </div>
+                <div class="signup-btn" id="signup-bt"><button type="submit">Sign Up</button></div>
+                <h4 class="forem">
+                    <a href="{% url 'sign_in' %}" id="have_accn">I have an account</a>
+                </h4>
+                <div class="cancel"></div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

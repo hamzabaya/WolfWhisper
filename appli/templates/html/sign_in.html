@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>WolfWhisper: Sign in</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'index' %}">
+            <img src="{% static 'images/logo.png' %}" class="logo"/>
+        </a>
+        <ul>
+            <a href="{% url 'index' %}">Home</a>
+            <button class="sign" id="sign_up"><a href="{% url 'sign_up' %}">Sign Up</a></button>
+        </ul>
+    </nav>
+
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <section id="sect_sign_in">
+        <div class="login">
+            <h3 class="title">Sign in</h3>
+            
+            <form method="post" action="{% url 'sign_in' %}">
+                {% csrf_token %}
+                
+                <div class="user-inputs">
+                    <label for="email_login">Email</label>
+                    <input type="email" name="identifiant" required>
+                </div>
+                <div class="user-inputs">
+                    <label for="password_login" id="password_login_label">Password</label>
+                    <input type="password" id="password_login" name="mot_de_passe" required>
+                </div>
+                <div class="forem">
+                    <div class="rem">
+                        <input type="checkbox">
+                        <p class="remember">Remember me</p>
+                    </div>
+                </div>
+                <div class="signin-btn" id="signin-bt"><button type="submit">Login</button></div>
+                <div class="cancel"></div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>WolfWhisper: Where Conversations Run Wild ...</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'index' %}">
+            <img src="{% static 'images/logo.png' %}" class="logo"/>
+        </a>
+        <ul>
+            <a href="{% url 'index' %}">Home</a>
+            <button class="sign" id="sign_up"><a href="{% url 'sign_up' %}">Sign Up</a></button>
+            <button class="sign" id="sign_in"><a href="{% url 'sign_in' %}">Sign In</a></button>
+        </ul>
+    </nav>
+    <section id="sect_home">
+        <div class="home">
+            <h1 class="title">Welcome !</h1>
+            
+            <h3>WolfWhisper : What is it about ?</h3>
+            <p><br/>WolfWhisper was created, in 2023, by a group of 1st year computer science and networks students at ENSISA supervised by Mr. DEVANNE Maxime and Mr. WEBER Jonathan during a web project.</p>
+            <p><br/>It is simply a chat application that allows you to chat with people in a modest and friendly atmosphere. It's easy to use and, don't worry, it's not addictive.</p>
+            <p><br/>So, join us and have fun with your friends!<br/><br/></p>
+            
+            <h3>Services</h3>
+            <p><br/>To sign in, enter your email, password and then press "sign in" .</p>
+            <p><br/>If it's your first time with us, press "sign up" and then enter the data required.<br/><br/></p>
+            
+            <h3>Contacts</h3>
+            <p><br/>For further informations, contact us on one of the following emails :<br/><br/></p>
+            <ul>
+                <li><a href="mailto:hamza.baya@uha.fr">hamza.baya@uha.fr<br/></a> </li>
+                <li><a href="mailto:youssef.rochdi@uha.fr">youssef.rochdi@uha.fr<br/></a> </li>
+                <li><a href="mailto:nassim.ouidir@uha.fr">nassim.ouidir@uha.fr<br/></a> </li>
+            </ul>
+            
+        </div>
+    </section>
+</body>
+</html>

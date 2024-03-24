@@ -1,0 +1,360 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: white;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../images/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #000; /* Fallback color */
+    padding-bottom: 20px;
+}
+
+.logo{
+    width: 5%;
+    margin-top: -25px;
+    margin-left: -2px;
+}
+
+nav{
+    margin-top: 20px;
+}
+
+nav:hover{
+    cursor: pointer;
+}
+
+nav ul{
+    margin-right: 120px;
+    display: inline;
+    float: right;
+}
+
+nav ul a{
+    font-size: 25px; /* Adapté pour la lisibilité */
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+nav ul a:hover,
+nav ul a:focus {
+    color: white;
+}
+
+nav ul:hover a:not(:hover) {
+    color: white;
+    opacity: 0.2;
+
+}
+
+.sign{
+    cursor: pointer;
+    background-color: #7a5bd8;
+    font-weight: bold;
+    color: white;
+    border: none;
+    padding: 7px 7px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 25px;
+    width: 18vb;
+    height: 6vh;  
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    
+}
+
+.sign:hover,
+.signin-btn:hover,
+.signup-btn:hover,
+.sign:focus,
+.signin-bt:focus,
+.signin-bt:focus
+{
+    color: white;
+    transform: translateY(-2px);
+}
+
+
+/* login container */
+#sect_sign_in {
+    width: 600px;
+    height: 500px;
+    border: 2px solid whitesmoke;
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.95;
+    backdrop-filter: blur(400px);
+    transition: 0.3s linear;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+#sect_sign_up {
+    width: 600px;
+    height: 950px;
+    border: 2px solid whitesmoke;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.95;
+    backdrop-filter: blur(400px);
+    transition: 0.3s linear;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+#sect_home {
+    margin-top: 140px;
+    max-width: 600px; 
+    border: 2px solid whitesmoke;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.95;
+    backdrop-filter: blur(400px);
+    transition: 0.3s linear;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+}
+
+
+
+.login .title, .sign_up .title, .home .title {
+    font-size: 55px;
+    margin: 10px 0 20px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.home h3{
+    text-align: center;   
+}
+
+.home ul {
+    padding-left: 35%;
+}
+
+#signin-bt #signup-bt {
+    border-radius: 10px;
+}
+
+.user-inputs {
+    width: 80%;
+    margin: 0px 10%;
+}
+
+.user-inputs label{
+    position: absolute;
+    font-size: 1.8rem;;
+    font-weight: 600;
+    left: 90px;
+    margin-top: 20px;
+}
+
+.user-inputs input{
+    background-color: white;
+    width: 100%;
+    margin-top: 55px;
+    padding-left: 10px;
+    font-size: 1.9rem;
+    border: none;
+    border-radius: 4px;
+    border-bottom: 2px solid black;
+    color: blueviolet;
+}
+
+
+.forem {
+    width: 86%;
+    MARGIN: 0 7%;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    justify-content: space-between;
+}
+
+.forem #have_accn {
+    margin-top: 10px;
+    margin-left: 155px;
+}
+
+.forem .rem{
+    display: flex;
+    margin-left: 15px;   
+}
+
+.forem .rem .remember{
+    margin-left: 10px;
+    margin-top: 3px;
+}
+
+#signin-bt, #signup-bt{
+    border-radius: 4px;
+    color: white;
+    width: 80%;
+    margin: 0 10%;
+    text-align: center;
+    height: 6vh;
+    background-color: blueviolet;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+
+
+    #join_room {
+        border-radius: 4px;
+        color: white;
+        width: 80%;
+        margin: 0 10%;
+        text-align: center;
+        height: 6vh;
+        background-color: blueviolet;
+        overflow: hidden;
+        margin-top: 20px;
+    }
+
+#signin-bt button, #signup-bt button, #join_room{
+    background-color: transparent;
+    color: white;
+    font-size: 1.8rem;
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+/* Add space between the sections */
+.chatroom {
+    margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+/* Style the input and buttons */
+#chatroom-id {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 10px;
+    border: 1px solid #34495e;
+    border-radius: 5px;
+    width: 200px;
+    margin-right: 10px; /* Add margin to the right of the input */
+}
+#chatroom-id-create {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 10px;
+    border: 1px solid #34495e;
+    border-radius: 5px;
+    width: 200px;
+    margin-right: 10px; /* Add margin to the right of the input */
+}
+
+.Join {
+    background-color: #3498db; /* Blue background color */
+    color: #ffffff; /* White text color */
+    padding: 10px 20px; /* Adjust padding for better appearance */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.join-button {
+    background-color: #2980b9;
+    color: #fff;
+    padding: 25px 50px; /* Adjust padding for height and width */
+    font-size: 20px; /* Adjust font size */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.join-button:hover {
+    background-color: #1c4966;
+}
+
+.references-section {
+            margin-top: 600px; /* Push to the bottom */
+            text-align: center;
+        }
+
+.chat-section {
+            background-color: #39424e;
+            padding: 10px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+#chatroom-name {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+#chat-input {
+            width: 80%;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+        }
+#send-button {
+            background-color: #61dafb;
+            color: black;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+#message-input-container {
+            width: 70%;
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+@media (max-width: 768px) {
+    .logo {
+        width: 10%; /* Ajuster selon le rendu désiré */
+    }
+
+    nav ul a {
+        font-size: 1rem;
+    }
+
+    section {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .login .title {
+        font-size: 1.8rem;
+    }
+
+    .user-inputs input {
+        font-size: 0.9rem;
+    }
+}
+
+
